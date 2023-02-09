@@ -1,0 +1,761 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap');
+*{
+    text-decoration: none;
+    font-family:'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.modal {
+  display: none; /* Hidden by default */
+ /* position: fixed; /* Stay in place */
+ /* z-index: 1; /* Sit on top */
+ /* left: 0;
+ /* top: -400px;*/
+ /* width: 50%;  Full width */
+  /*height: 50%;  Full height */
+  overflow-y: hidden; /* Enable scroll if needed */
+  transition: height 0.3s;
+  
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px;
+  height:500px; /* Could be more or less, depending on screen size */
+  border:1px solid black;
+  margin-top:10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*modal content ending*/
+
+body .navbar{
+    width:auto;
+    height:100px;
+    display:flex;
+    align-items: center;
+    position: sticky; 
+    top: 0;
+    transition: height 0.3s;
+    z-index: 999;
+}
+ body .header_small{
+height:60px;
+}
+.navbar .navbar_links{
+  display:flex;
+  width:100%;
+  height: 100px;
+  justify-content: space-around;
+  background-color: white;
+    color:black;
+}
+.navbar_links .navlinks{
+  width:60%;
+  height:auto;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  color:black;
+}
+.navlinks .hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.navlinks li{
+  list-style: none;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+    color:black;
+}
+.navbar_links span{
+  width:20%;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+    color:black;
+}
+
+/*slider section styling begin*/
+
+.head_slider{
+  width:100%;
+  height:600px;
+  display:flex;
+}
+.head_slider .prev_button{
+  width:10%;
+  height:100%;
+  border-right:1px solid black;
+  background: #004080;
+}
+.prev_button .prev_button_inner{
+  width:65%;
+  height:120px;
+  background-color: white;
+  transition: 0.1s;
+  margin-top:250px;
+  position: relative;  
+  margin-left:17.5%;
+}
+.prev_button_inner .swiper-button-prev{
+  margin-left:20%;
+}
+
+.head_slider .slider_content{
+  width:80%;
+  height:100%;
+  border-left:1px solid black;
+  display: flex;
+}
+.slider_content .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.head_slider .next_button{
+  width:10%;
+  height:100%;
+  border-left:2px solid black;
+  background-color:#8F1718;
+}
+.next_button .next_button_inner{
+  width:65%;
+  height:120px;
+  background-color: white;
+  transition: 0.1s;
+  margin-top:250px;
+  position: relative;
+  margin-left:17.5%;  
+}
+.next_button_inner .swiper-button-next{
+  position: absolute;
+  right:30%;
+}
+
+.decoline {
+	position: absolute;
+}
+.codrops-header-2{
+    width:80%;
+    height:150px;
+    border:1px solid black;
+   
+}
+.text_animation{
+    width:70%;
+    height:150px;
+    position:absolute;
+    top:350px;
+    left:15%;
+    font-size: 24px;
+    text-align: justify;
+}
+.get_in_touch{
+    width:50%;
+    height:100px;
+    position:absolute;
+    top:520px;
+    left:25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.get_in_touch_button{
+    width:150px;
+    height:50px;
+    background-color: white;
+    color:black;
+}
+.about_united_section{
+    width:auto;
+    height:auto;
+}
+.ml10{
+    font-weight: 700;
+    font-size: 60px;
+}
+.ml10 .text-wrapper{
+    position: relative;
+    display: inline-block;
+    margin-left:10%;
+}
+.ml10 .letter {
+    display: inline-block;
+    transform-origin: 0 0;
+  }
+  .data_about_united{
+    width:70%;
+    height:auto;
+    margin-left:10%;
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    margin-top:100px;
+  }
+  .about_united_section .united_data{
+   padding-right:20px;
+   padding-left:20px;
+  }
+/*gallery section styling begin*/
+.gallery_section{
+  max-width: 1210px;
+  width:80%;
+  height:500px;
+  overflow-Y: scroll;
+  border:1px solid black;
+  margin:auto;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.gallery_section::-webkit-scrollbar {
+  visibility: hidden;
+}
+.grid {
+  column-count: 4;
+  column-gap: .5em;
+  max-width: 1150px;
+  margin: auto;
+  width: 100%;
+  height:auto;
+}
+.grid__item{
+  border:1px solid black;
+  height:250px;
+  margin:10px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+@media(max-width: 800px) {
+    .grid {
+      column-count: 3;
+  }
+}
+
+@media(max-width: 600px) {
+    .grid {
+      column-count: 2;
+  }
+}
+
+@media(max-width: 400px) {
+    .grid {
+      column-count: 1;
+  }
+}
+/*image gallery section styling done*/
+/*brands we deal section styling begin*/
+
+.brands_we_deal{
+      width:80%;
+      height:500px;
+      margin: 50px auto;  
+      display: flex;
+      overflow:hidden;
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+}
+.brands_we_deal .united_hardware{
+  width:95%;
+  height:100%;
+  position:relative;
+  box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+  margin-right:25px;
+}
+.united_hardware #myDiv {
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  height: 0px;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.2); /* Make sure this color has an opacity of less than 1*/
+  backdrop-filter: blur(12px);
+  position: absolute;
+  top:0px;
+  width:100%;
+  display:none;
+}
+.united_hardware .hardware_brands{
+  width:100%;
+  height:100%;
+  grid-template-columns: auto auto auto auto;
+}
+
+#myDiv.open {
+  height: 500px;
+  opacity: 1;
+}
+
+/*
+.united_hardware section{
+  width:100%;
+  height:90%;
+  margin:0 auto;
+}
+.united_hardware section .ventures_list li{
+  text-align: justify;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  list-style-type: disc;
+}
+.united_hardware .toggler1{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0%;
+}
+.toggler1 #effect1{
+  width:100%;
+  height:100%;
+  background: rgba(255, 255, 255, 0.2); /* Make sure this color has an opacity of less than 1*/
+  /*backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 150px 300px;
+}
+#effect1 div{
+  width:100px;
+  height:100px;
+  border:2px solid black;
+  background-color: white;
+  margin-left:10px;
+  margin-top:10px;
+}*/
+.united_agency  #button1{
+  position:absolute;
+  bottom:25px;
+}
+.united_hardware  select{
+  visibility: hidden;
+}
+.brands_we_deal .united_agency{
+  width:95%;
+  height:100%;
+  position: relative;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+} 
+
+.united_agency #mydiv {
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  height: 0px;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.2); /* Make sure this color has an opacity of less than 1*/
+  backdrop-filter: blur(12px);
+  position: absolute;
+  top:0px;
+  width:100%;
+}
+.united_agency .agencies_brands{
+  width:100%;
+  height:100%;
+  grid-template-columns: auto auto auto auto;
+}
+
+#mydiv.open {
+  height: 500px;
+  opacity: 1;
+}
+/*
+.united_agency .toggler{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0%;
+}
+.toggler #effect{
+  width:100%;
+  height:100%;
+  background: rgba(255, 255, 255, 0.2); /* Make sure this color has an opacity of less than 1*/
+ /* backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns:  auto auto auto auto;
+  grid-template-rows: 150px 300px;
+}
+#effect div{
+  width:100px;
+  height:100px;
+  border:2px solid black;
+  background-color: white;
+  margin-left:10px;
+  margin-top:10px;
+}
+
+.united_hardware #button{
+  position:absolute;
+  bottom:25px;
+}
+.united_agency select{
+  visibility: hidden;
+}
+*/
+
+
+
+
+/*brands we deal section styling ending*/
+/*companies we serve section begin*/
+.united_brands{
+  width:80%;
+  height:200px;
+  margin: 0 auto;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.united_brands .slider {
+/*   background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before, .slider::after {
+/*   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); */
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 150px;
+  width: 150px;
+  border:2px solid black;
+  margin: 25px 10px; 
+}
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit: fit;
+}
+
+
+
+/*companies we serve section ending */
+/*contact us section styling beign*/
+
+
+
+.contact_us{
+    max-width:1080px;
+    width:100%;
+    height:250px;
+    margin: auto;
+    border:1px solid black;
+}
+.contact_us_title{
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size:50px;
+}
+.contact_us_title p{
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.contact_us .contact_form{
+  width:100%;
+  height:100px;
+  margin-top:50px;
+}
+.contact_form form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact_form form input{
+  width:50%;
+  height:50px;
+  border:2px solid black;
+  margin:25px;
+}
+.contact_form form input::placeholder{
+  font-size: 25px;
+  letter-spacing: 5px;
+}
+.contact_form form button{
+  width:50%;
+  height:50px;
+  font-size:25px;
+  margin-right: 10px;
+  border:2px solid black;
+  background-color:#ee3b3b98;
+}
+/*contact form section styling ending*/
+/*maps section styling*/
+.maps_email{
+  width:80%;
+  height:450px;
+  margin: 25px auto;
+  display:flex;
+  border:1px solid black;
+}
+.maps_email .map{
+  width:100%;
+  height:100%;
+  border:2px solid black;
+}
+.maps_email .email_mobile{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  text-align:left;
+  padding:10px;
+  align-items:center;
+  justify-content: center;
+  background-color:aliceblue;
+}
+.email_mobile p,h3{
+  margin-left:15px;
+  line-height: 1.05;
+}
+
+.email_mobile .email_content{
+  width:80%;
+  height:100px;
+  border:2px solid black;
+  text-align: center;
+  font-size: 35px;
+  line-height: 2.5;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.email_content button{
+  width:60%;
+  height:55px;
+  font-size:18px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.email_mobile .contact_content{
+  width:80%;
+  height:100px;
+  border:2px solid black;
+  text-align: center;
+  font-size: 35px;
+  line-height: 2.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact_content button{
+  width:60%;
+  height:55px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+/**/
+
+
+
+
+
+/*footer section styling ending*/
+.footer_Section{
+  width:auto;
+  height:450px;
+  background-color: #FAF7F0;
+  border:1px solid black;
+}
+.footer_heading{
+  width:80%;
+  height:150px;
+  margin:25px auto;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.footer_title{
+  width:250px;
+  height:100px;
+  word-wrap: break-word;
+  font-size:40px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:1px solid black;
+}
+.footer_title h1{
+  margin-top:0px;
+}
+.social_icons_footer{
+  width:250px;
+  height:150px;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.social_footer{
+  width:75px;
+  height:75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_title_2{
+  width:300px;
+  height:100px;
+  font-size: 35px;
+  word-wrap: break-word;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.usefull_links{
+  width:100%;
+  height:200px;
+  display: flex;
+}
+.usefull_links p{
+  width:50%;
+  height:100%;
+  text-align: justify;
+  letter-spacing: 1px;
+  word-spacing: 0px;
+  margin-left:10%;
+  line-height: 1;
+}
+.links_usefull{
+  width:40%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left:10%;
+}
+.links_usefull  li{
+    font-size:20px;
+    margin-top:10px;
+    margin-left:25px;
+}
+.send_email{
+  width:80%;
+  margin-left:10%;
+  height:100px;
+  margin-top:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.send_email input{
+  width:400px;
+  height:50px;
+  border:2px solid black;
+}
+.send_email input::placeholder{
+  font-size: 25px;
+}
+.send_email .submit_btn{
+  width:175px;
+  font-size: 20px;
+  height:40px;
+  border:2px solid black;
+  background-color: #36c223e1;
+}
